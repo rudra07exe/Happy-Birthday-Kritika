@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,9 +32,8 @@ body {
   background: var(--blue-pale);
   overflow-x: hidden;
   overflow-y: auto;
+  min-height: 100vh;
 }
-
-/* LOCK UNTIL START BUTTON IS PRESSED */
 
 body.page-locked {
   overflow: hidden;
@@ -48,8 +46,6 @@ body.page-locked > section:not(.hero),
 body.page-locked > footer {
   display: none !important;
 }
-
-/* FLOATING EMOJIS */
 
 .floaty {
   position: fixed;
@@ -73,8 +69,6 @@ body.page-locked > footer {
     opacity: 0;
   }
 }
-
-/* OPENING SCREEN */
 
 .hero {
   min-height: 100vh;
@@ -183,8 +177,6 @@ body.page-locked .hero {
   background: var(--blue-dark);
 }
 
-/* GENERAL SECTIONS */
-
 section {
   padding: 78px 20px;
 }
@@ -204,8 +196,6 @@ section {
   font-size: clamp(15px, 2vw, 17px);
   line-height: 1.6;
 }
-
-/* BIRTHDAY MESSAGE */
 
 .message-section {
   background: white;
@@ -236,18 +226,12 @@ section {
   margin-bottom: 22px;
 }
 
-.message-space {
-  min-height: 340px;
-}
-
 .signature {
   margin-top: 25px;
   font-family: Georgia, serif;
   font-size: 22px;
   color: var(--blue-dark);
 }
-
-/* LONG CINEMATIC PHOTO GALLERY */
 
 .gallery-section {
   position: relative;
@@ -280,8 +264,6 @@ section {
   perspective: 1200px;
 }
 
-/* PHOTO CARDS */
-
 .photo {
   width: min(75%, 530px);
   padding: 10px;
@@ -289,15 +271,12 @@ section {
   background: rgba(255,255,255,.94);
   border: 1px solid rgba(255,255,255,.9);
   box-shadow: 0 18px 45px rgba(35,79,131,.14);
-
   opacity: 0;
   transform: translateY(90px) scale(.88) rotateX(7deg);
-
   transition:
     opacity .9s ease,
     transform 1s cubic-bezier(.2,.7,.2,1),
     box-shadow .4s ease;
-
   will-change: opacity, transform;
   -webkit-tap-highlight-color: transparent;
 }
@@ -311,14 +290,10 @@ section {
   object-fit: contain;
 }
 
-/* REVEAL ONE PHOTO AT A TIME */
-
 .gallery-item.is-visible .photo {
   opacity: 1;
   transform: translateY(0) scale(1) rotateX(0);
 }
-
-/* CAPTIONS */
 
 .photo-caption {
   margin-top: 24px;
@@ -326,10 +301,8 @@ section {
   font-family: Georgia, serif;
   font-size: clamp(17px, 2.5vw, 22px);
   text-align: center;
-
   opacity: 0;
   transform: translateY(15px);
-
   transition:
     opacity .8s ease .2s,
     transform .8s ease .2s;
@@ -340,16 +313,12 @@ section {
   transform: translateY(0);
 }
 
-/* DESKTOP HOVER */
-
 @media (hover: hover) and (pointer: fine) {
   .gallery-item.is-visible .photo:hover {
     transform: translateY(-8px) scale(1.025) rotateZ(-1deg);
     box-shadow: 0 28px 55px rgba(35,79,131,.22);
   }
 }
-
-/* GIFT SECTION */
 
 .surprise-section {
   text-align: center;
@@ -393,8 +362,6 @@ section {
   display: block;
 }
 
-/* CLOSING SECTION */
-
 .final-section {
   text-align: center;
   background: linear-gradient(135deg, #e6f2ff, #f8fcff);
@@ -414,14 +381,15 @@ section {
 }
 
 .footer {
-  text-align: center;
+  display: block;
+  width: 100%;
+  margin: 0;
   padding: 24px;
+  text-align: center;
   background: #203750;
   color: #e5f1ff;
   font-size: 14px;
 }
-
-/* MOBILE LAYOUT */
 
 @media (max-width: 600px) {
   section {
@@ -464,10 +432,6 @@ section {
     font-size: 16px;
   }
 
-  .message-space {
-    min-height: 300px;
-  }
-
   .gallery-section {
     padding: 65px 12px 75px;
   }
@@ -507,15 +471,11 @@ section {
   }
 }
 
-/* EXTRA SMALL PHONES */
-
 @media (max-width: 360px) {
   .hero h1 {
     font-size: 39px;
   }
 }
-
-/* ACCESSIBILITY */
 
 @media (prefers-reduced-motion: reduce) {
   *,
@@ -537,8 +497,6 @@ section {
 
 <body class="page-locked">
 
-<!-- OPENING SCREEN -->
-
 <section class="hero">
   <div class="hero-content">
     <div class="cake">🎂</div>
@@ -558,39 +516,35 @@ section {
   </div>
 </section>
 
-<!-- MESSAGE SECTION -->
-
 <section class="message-section" id="message">
-  <h2 class="section-title">A Little Message </h2>
+  <h2 class="section-title">A Little Message</h2>
   <p class="section-subtitle">A birthday note, just for you</p>
 
- 
-<div class="message-card">
-  <div class="hello">Happyyy Birthday! 🎂🥳</div>
+  <div class="message-card">
+    <div class="hello">Happyyy Birthday! 🎂🥳</div>
 
-  <p>So first of all, happy birthday Kritika !!!! 🤍🫂 Lots and lots of wishes for u, especially on ur special day! 🎂✨</p>
+    <p>So first of all, happy birthday Kritika !!!! 🤍🫂 Lots and lots of wishes for u, especially on ur special day! 🎂✨</p>
 
-  <p>I don't know if you'd like this or not. I don't even know if ur ID will be active today or if you've blocked me or not 😭😂 But a few days back, u told me that u didn't want to celebrate ur birthday, right?</p>
+    <p>I don't know if you'd like this or not. I don't even know if ur ID will be active today or if you've blocked me or not 😭😂 But a few days back, u told me that u didn't want to celebrate ur birthday, right?</p>
 
-  <p>Okay, now let me clear one thing up. It's not like I made this out of pity or anything. I made it because I genuinely wanted to make u feel special on ur day. So I thought, why not create a small space in this vast internet, just for u? A little corner that's urs, with a few wishes from my side. 🩵🌷</p>
+    <p>Okay, now let me clear one thing up. It's not like I made this out of pity or anything. I made it because I genuinely wanted to make u feel special on ur day. So I thought, why not create a small space in this vast internet, just for u? A little corner that's urs, with a few wishes from my side. 🩵🌷</p>
 
-  <p>And I can't forget to mention that ur my first-ever international friend after I became an adult, or u can say, someone who can actually remember events. 😂🤌🏻 I still remember the first day I messaged u and how friendly u were with me instead of just showing me attitude. It's a small thing, maybe, but it's something I still remember fondly. 🫶🏻</p>
+    <p>And I can't forget to mention that ur my first-ever international friend after I became an adult, or u can say, someone who can actually remember events. 😂🤌🏻 I still remember the first day I messaged u and how friendly u were with me instead of just showing me attitude. It's a small thing, maybe, but it's something I still remember fondly. 🫶🏻</p>
 
-  <p>U have so much time ahead of u, kiddo, and so many beautiful things left to experience. I genuinely hope all the personal problems ur dealing with eventually come to an end and that life gets a little kinder to u. But more than anything, I just hope u become happy. Like, genuinely happy, without having to pretend that everything is okay when it isn't. 🩵🫂</p>
+    <p>U have so much time ahead of u, kiddo, and so many beautiful things left to experience. I genuinely hope all the personal problems ur dealing with eventually come to an end and that life gets a little kinder to u. But more than anything, I just hope u become happy. Like, genuinely happy, without having to pretend that everything is okay when it isn't. 🩵🫂</p>
 
-  <p>Again, wishing u a very, very happy birthday, kiddo! 🤍🎂 Enjoy ur special day in whatever way u want to. Keep being the same cute, kind little bacha u are. 🦋✨</p>
+    <p>Again, wishing u a very, very happy birthday, kiddo! 🤍🎂 Enjoy ur special day in whatever way u want to. Keep being the same cute, kind little bacha u are. 🦋✨</p>
 
-  <div class="signature">
-    A small gift from ur kabhi-kabhi block rehne wala senior dost. 😂🤍
+    <div class="signature">
+      A small gift from ur kabhi-kabhi block rehne wala senior dost. 😂🤍
+    </div>
   </div>
-</div>
-
-
-<!-- LONG SCROLLING PHOTO GALLERY -->
+</section>
 
 <section class="gallery-section" id="memories">
- <h2 class="section-title">Who is that kiddooo?? 👀🤏🏻</h2>
-<p class="section-subtitle">Chalo, ab dekh lete hai kaun haiii 😂🫵🏻💙✨</p>
+  <h2 class="section-title">Who is that kiddooo?? 👀🤏🏻</h2>
+  <p class="section-subtitle">Chalo, ab dekh lete hai kaun haiii 😂🫵🏻💙✨</p>
+
   <div class="gallery-story">
 
     <div class="gallery-item">
@@ -630,8 +584,6 @@ section {
 
   </div>
 </section>
-
-<!-- GIFT SURPRISE -->
 
 <section class="surprise-section">
   <div class="surprise-box">
@@ -673,8 +625,6 @@ section {
   </div>
 </section>
 
-<!-- FINAL SECTION -->
-
 <section class="final-section">
   <h2>Happy Birthday! 🎂</h2>
   <p>Wishing you the loveliest year ahead. 💙✨</p>
@@ -683,8 +633,6 @@ section {
 <footer class="footer">Chotii si bachiii k liye chotii si koshish from MY side....</footer>
 
 <script>
-/* UNLOCK THE PAGE */
-
 function unlockPage(event) {
   event.preventDefault();
 
@@ -695,8 +643,6 @@ function unlockPage(event) {
     block: "start"
   });
 }
-
-/* FLOATING EMOJIS */
 
 function createFloaty() {
   const item = document.createElement("div");
@@ -718,8 +664,6 @@ function createFloaty() {
 
 setInterval(createFloaty, 1000);
 
-/* GIFT SURPRISE */
-
 function openSurprise() {
   const surprise = document.getElementById("surprise");
 
@@ -728,8 +672,6 @@ function openSurprise() {
     createConfetti();
   }
 }
-
-/* CONFETTI */
 
 function createConfetti() {
   const pieces = ["🎉", "✨", "💙", "🎊", "⭐", "🫧"];
@@ -763,8 +705,6 @@ function createConfetti() {
     setTimeout(() => piece.remove(), duration * 1000 + 300);
   }
 }
-
-/* REVEAL PHOTOS ONE BY ONE WHILE SCROLLING */
 
 const galleryItems = document.querySelectorAll(".gallery-item");
 
